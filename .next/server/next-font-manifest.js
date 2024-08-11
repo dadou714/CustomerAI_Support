@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/dadou/HeadStarter/CustomeAI_Support/CustomerAI_Support/src/app/layout\":[\"static/media/3d9ea938b6afa941-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

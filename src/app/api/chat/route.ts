@@ -64,6 +64,8 @@ export async function POST(req: Request) {
     }
   })
 
+  return new Response(stream)
+
 //   console.log();
 //   return NextResponse.json({ message:completion.choices[0].message.content},
 //     {status: 200}
