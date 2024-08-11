@@ -43,8 +43,8 @@ export default function Home() {
     <div
     className="w-svw h-screen flex flex-col justify-center items-center "
     > 
-      <div className="flex flex-col w-1/4 h-[700px] border border-spacing-x-4 border-spacing-y-12 bg-secondary" >
-      <div className="w-[449px] text-white text-center mx-auto p-2 h-12 bg-primary"> Visit Rwanda Support</div>
+      <div className="flex flex-col p-2 lg:p-0 lg:w-1/4 h-[700px] border border-spacing-x-4 border-spacing-y-12 bg-secondary rounded">
+      <div className="w-full lg:w-[449px] text-white text-center mx-auto p-2 h-12 bg-primary"> Visit Rwanda Support</div>
         <Stack direction={'column'} spacing={4} p={2} flexGrow={1} overflow={'auto'} maxHeight="100%">
           {messages.map((message: MessageT, index: number)=>(
             <Box key={index} display='flex' justifyContent={message.role === 'assistant'?'flex-start':'flex-end'}>
