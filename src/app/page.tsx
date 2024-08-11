@@ -2,6 +2,11 @@
 import { Box, Button, Stack, TextField } from "@mui/material";
 import { useState } from "react";
 import { MessageT, ProcessTextFuncT } from "./types/common";
+import React from 'react'
+
+import backgroundImage from '../assets/images/1000hills.jpg'; 
+
+
 export default function Home() {
   const [messages, setMessages] = useState<MessageT[]>([
     {role: 'assistant', content: 'Hello and welcome to Visit Rwanda! I’m your AI customer support assistant, How can I assist you today?'}
@@ -41,9 +46,20 @@ export default function Home() {
   return (
     <>
     <div
-    className="w-svw h-screen flex flex-col justify-center items-center "
-    > 
-      <div className="flex flex-col p-2 lg:p-0 lg:w-1/4 h-[700px] border border-spacing-x-4 border-spacing-y-12 bg-secondary rounded">
+    className="w-svw h-screen flex flex-col justify-center items-center " 
+    style={{
+      backgroundImage: `url(${backgroundImage.src})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+  
+   }}>
+    
+      <div className="flex flex-col p-2 lg:p-0 lg:w-1/4 h-[700px] border border-spacing-x-4 border-spacing-y-12 bg-secondary rounded"
+      style={{
+        borderWidth:3,
+        borderColor:"white"
+      }}>
       <div className="w-full text-white text-center mx-auto p-2 h-12 bg-primary"> Visit Rwanda Support</div>
         <Stack direction={'column'} spacing={4} p={2} flexGrow={1} overflow={'auto'} maxHeight="100%">
           {messages.map((message: MessageT, index: number)=>(
@@ -55,8 +71,8 @@ export default function Home() {
           ))}
         </Stack>
         <Stack direction="row" spacing={2} p={2}>
-          <TextField label="Message" fullWidth value={message} 
-          onChange={(e) => setMessage(e.target.value)}/>
+          <TextField label="Your response" fullWidth value={message} 
+          onChange={(e) => setMessage(e.target.value)} style={{backgroundColor:"white"}}/>
           <Button variant="contained" onClick={sendMessage} style={{
             backgroundColor:"#0cad85"
           }}>Send</Button>
