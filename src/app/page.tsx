@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MessageT, ProcessTextFuncT } from "./types/common";
 export default function Home() {
   const [messages, setMessages] = useState<MessageT[]>([
-    {role: 'assistant', content: 'Hello and welcome to Visit Rwanda! I’m your AI customer support assistant, How can I assist you today?P'}
+    {role: 'assistant', content: 'Hello and welcome to Visit Rwanda! I’m your AI customer support assistant, How can I assist you today?'}
   ])
   const [message, setMessage] = useState<string>('');
 
