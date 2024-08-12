@@ -7,7 +7,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Customer AI Support",
+  title: "Visit Rwanda Chatbot",
   description: "Visit Rwanda Customer AI Support",
 };
 
